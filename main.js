@@ -1,10 +1,11 @@
-require("events").EventEmitter.defaultMaxListeners = 32;
+const maxListeners = 32
+require("events").EventEmitter.defaultMaxListeners = maxListeners;
 const path = require("path");
 const fs = require('fs');
 const html_to_pdf = require('html-pdf-node');
 const pLimit = require('p-limit');
 
-const limit = pLimit(24);
+const limit = pLimit(maxListeners-10);
 const pdfsPath = path.resolve(__dirname, "pdfs");
 
 const createDirectoryIfNotExists = (directory) => {
