@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "html-pdf-node": "^1.0.5",
+    "jsdom": "^16.4.0",
     "p-limit": "^3.0.2"
   }
 }
